@@ -1,21 +1,23 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const navList = [
-  { title: "Home", link: "#" },
-  { title: "About", link: "#" },
-  { title: "Menu", link: "#" },
-  { title: "Reservations", link: "#" },
-  { title: "Order Online", link: "#" },
-  { title: "Login", link: "#" },
+  { title: "Home", link: "/" },
+  { title: "About", link: "about" },
+  { title: "Menu", link: "menu" },
+  { title: "Reservations", link: "reservations" },
+  { title: "Order Online", link: "order-online" },
+  { title: "Login", link: "login" },
 ];
 const Nav = () => {
   return (
-    <nav>
-      <ul>
+    <nav className="nav">
+      <ul className="ul">
         {navList.map(({ title, link }) => {
           return (
             <li key={title}>
-              <a href={link}>{title}</a>
+              <Link className="a-tag" to={link}>
+                {title}
+              </Link>
             </li>
           );
         })}

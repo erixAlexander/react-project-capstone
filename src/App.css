@@ -1,38 +1,359 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Nunito:ital,wght@1,800&family=Poppins:wght@600;700&display=swap");
+html {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+}
+
+body {
   text-align: center;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin: 30px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav {
+  width: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.a-tag {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+}
+
+.main .hero {
+  background: #495e57;
+  min-height: 400px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px;
+}
+
+.hero .title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 400px;
+  text-align: left;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero .title h1 {
+  font-size: 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero .title h2,
+.hero .title p {
+  margin-bottom: 40px;
+}
+
+.main .hero .title {
+  width: 400px;
+}
+
+.hero .img img {
+  width: 400px;
+  max-height: 400px;
+  top: 30px;
+  left: 0;
+  position: absolute;
+}
+
+.hero .img {
+  min-width: 400px;
+  min-height: 400px;
+  position: relative;
+}
+
+.hero .online-menu {
+  position: absolute;
+  top: 460px;
+  left: 140px;
+  background-color: #f4ce14;
+  color: black;
+  border-radius: 16px;
+  padding: 15px 25px;
+  box-shadow: none;
+  border: none;
+  font-weight: bold;
+}
+
+.booking {
+  background-color: #f4ce14;
+  color: black;
+  border-radius: 16px;
+  padding: 15px 25px;
+  box-shadow: none;
+  border: none;
+  font-weight: bold;
+}
+
+.specials {
+  width: 70%;
+  min-height: 800px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.specials h1 {
+  font-size: 3rem;
+  align-self: flex-start;
+}
+
+.specials-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.specials-div img {
+  width: 300px;
+  height: 200px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.specials-div article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  width: 300px;
+  text-align: left;
+  min-height: fit-content;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.content {
+  background-color: rgb(245, 244, 244);
+  padding: 20px;
+}
+
+.specials-div article .special-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.specials-div button {
+  background-color: rgb(245, 244, 244);
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.icon-div {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.icon-div:hover,
+.icon-div button:hover {
+  cursor: pointer;
+}
+
+.special-title h3 {
+  color: #f4ce14;
+}
+
+.testimonials {
+  width: 100%;
+  height: 50vh;
+  min-height: 600px;
+  background: #495e57;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-title {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: white;
+}
+.testimonials-body {
+  width: 60%;
+  flex: 3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.testimonials-article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 200px;
+  min-height: 200px;
+  flex-wrap: wrap;
+  text-align: left;
+  gap: 20px;
+  background-color: #f4ce14;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.testimonials-article p {
+  font-size: 0.9rem;
+}
+
+.testimonials-article h2,
+.testimonials-article h3 {
+  font-size: 1rem;
+}
+
+.testimonials-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.testimonials-img img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10vw;
+  text-align: left;
+  min-height: 600px;
+}
+
+.about-info {
+  min-width: 20vw;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+.about-info h1 {
+  font-size: 2.5rem;
+}
+
+.about-info p {
+  margin-top: 30px;
+}
+
+.about-images {
+  position: relative;
+  width: 250px;
+  height: 350px;
+}
+
+.about-images img {
+  width: 270px;
+  height: 350px;
+  object-fit: cover;
+  object-position: 60% 0;
+  position: absolute;
+}
+
+.about-images #img2 {
+  top: 0px;
+  left: -100px;
+}
+.about-images #img1 {
+  top: 100px;
+  left: 80px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 170px;
+  margin: auto;
+  min-height: 250px;
+  background-color: rgb(228, 227, 227);
+  padding: 80px 40px;
+  text-align: left;
+}
+.footer-img img {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  border: 1px solid black;
+}
+
+.footer ul a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer ul li {
+  list-style: none;
+}
+
+.footer-social ul,
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  text-align: left;
+  gap: 15px;
+}
+
+.footer div {
+  max-width: 100px;
+}
+.footer h4 {
+  text-align: left;
+  margin-bottom: 15px;
 }
